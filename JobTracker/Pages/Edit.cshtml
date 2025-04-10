@@ -1,0 +1,52 @@
+﻿@page
+@model JobTracker.Pages.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>JobApplication</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="JobApplication.Id" />
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="JobApplication.Company" class="control-label"></label>
+                <input asp-for="JobApplication.Company" class="form-control" />
+                <span asp-validation-for="JobApplication.Company" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <span class="text-danger">*</span>
+                <label asp-for="JobApplication.Position" class="control-label"></label>
+                <input asp-for="JobApplication.Position" class="form-control" />
+                <span asp-validation-for="JobApplication.Position" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JobApplication.Status" class="control-label"></label>
+                <input asp-for="JobApplication.Status" class="form-control" />
+                <span asp-validation-for="JobApplication.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JobApplication.AppliedDate" class="control-label"></label>
+                <input asp-for="JobApplication.AppliedDate" class="form-control" />
+                <span asp-validation-for="JobApplication.AppliedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
