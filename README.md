@@ -1,3 +1,6 @@
+![.NET Core](https://img.shields.io/badge/.NET-8.0-blue)
+![Build Status](https://github.com/DWNorman47/JobTracker/actions/workflows/build.yml/badge.svg)
+
 # JobTracker
 A simple ASP.NET Core Razor Pages app to track job applications.
 
